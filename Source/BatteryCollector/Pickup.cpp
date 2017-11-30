@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include <Runtime/Engine/Classes/Components/StaticMeshComponent.h>
 #include "Pickup.h"
+#include <Runtime/Engine/Classes/Components/StaticMeshComponent.h>
 
 
 // Sets default values
