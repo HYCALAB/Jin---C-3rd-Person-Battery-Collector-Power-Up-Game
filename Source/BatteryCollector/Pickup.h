@@ -32,7 +32,12 @@ public:
 
 	/** Allows other calsses to safely change whether or not pickup is active*/
 	UFUNCTION(BlueprintCallable, Category = "Pickup")
-	void SetActive(bool PickupState);
+	void SetActive(bool NewPickupState);
+
+	/** Function to call when the pickup is collected */
+	UFUNCTION(BlueprintNativeEvent)
+	void WasCollected();
+	virtual void WasCollected_Implementation();
 
 protected:
 	/** True when the pickup can be used, and false when pickup is deactivated */
