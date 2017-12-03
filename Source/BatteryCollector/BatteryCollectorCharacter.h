@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "BatteryCollectorCharacter.generated.h"
 
-UCLASS(config=Game)
+UCLASS(config = Game)
 class ABatteryCollectorCharacter : public ACharacter
 {
 	GENERATED_BODY()
@@ -21,7 +21,7 @@ class ABatteryCollectorCharacter : public ACharacter
 
 	/** Collection sphere */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-		class USphereComponent* CollectionSphere;
+	class USphereComponent* CollectionSphere;
 public:
 	ABatteryCollectorCharacter();
 
@@ -59,14 +59,14 @@ protected:
 	/** Called for side to side input */
 	void MoveRight(float Value);
 
-	/** 
-	 * Called via input to turn at a given rate. 
+	/**
+	 * Called via input to turn at a given rate.
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void TurnAtRate(float Rate);
 
 	/**
-	 * Called via input to turn look up/down at a given rate. 
+	 * Called via input to turn look up/down at a given rate.
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void LookUpAtRate(float Rate);

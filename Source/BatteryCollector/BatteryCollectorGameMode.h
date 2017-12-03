@@ -9,7 +9,7 @@
 
 // Enum to store the current state of gameplay
 UENUM(BlueprintType)
-enum class EBatteryPlayState:uint8
+enum class EBatteryPlayState :uint8
 {
 	EPlaying UMETA(DisplayName = "Playing"),
 	EGameOver UMETA(Displayname = "Game Over"),

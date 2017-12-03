@@ -102,12 +102,12 @@ void ABatteryCollectorCharacter::OnResetVR()
 
 void ABatteryCollectorCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		Jump();
+	Jump();
 }
 
 void ABatteryCollectorCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		StopJumping();
+	StopJumping();
 }
 
 void ABatteryCollectorCharacter::TurnAtRate(float Rate)
@@ -138,12 +138,12 @@ void ABatteryCollectorCharacter::MoveForward(float Value)
 
 void ABatteryCollectorCharacter::MoveRight(float Value)
 {
-	if ( (Controller != NULL) && (Value != 0.0f) )
+	if ((Controller != NULL) && (Value != 0.0f))
 	{
 		// find out which way is right
 		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
-	
+
 		// get right vector 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 		// add movement in that direction
@@ -168,10 +168,10 @@ void ABatteryCollectorCharacter::CollectPickups()
 
 		// If the cast is successful and the pickup is valid and active
 		if (TestPickup && !TestPickup->IsPendingKill() && TestPickup->IsActive())
-		{			
+		{
 			// Call the pickup's WasCollected function
 			TestPickup->WasCollected();
-			
+
 			// Check to see if the pickup is also a battery
 			ABatteryPickup* const TestBattery = Cast<ABatteryPickup>(TestPickup);
 			if (TestBattery)
@@ -183,7 +183,7 @@ void ABatteryCollectorCharacter::CollectPickups()
 			// Deactivate the pickup
 			TestPickup->SetActive(false);
 		}
-	} 
+	}
 	if (CollectedPower > 0)
 	{
 		UpdatePower(CollectedPower);
