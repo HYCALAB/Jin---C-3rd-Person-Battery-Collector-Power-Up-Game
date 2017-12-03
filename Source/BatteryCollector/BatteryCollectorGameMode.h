@@ -62,6 +62,9 @@ private:
 	EBatteryPlayState CurrentState;
 
 	TArray<class ASpawnVolume*> SpawnVolumeActors;
+
+	/** Handle any function calls that rely upon changing the playing state of our game*/
+	void HandleNewState(EBatteryPlayState NewState);
 };
 
 
