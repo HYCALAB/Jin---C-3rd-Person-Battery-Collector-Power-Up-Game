@@ -114,4 +114,3 @@ public:
 	/** Returns CollectionSphere subobject **/
 	FORCEINLINE class USphereComponent* GetSphereCamera() const { return CollectionSphere; }
 };
-

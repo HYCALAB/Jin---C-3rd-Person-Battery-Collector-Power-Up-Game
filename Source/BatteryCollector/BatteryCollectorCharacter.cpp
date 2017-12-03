@@ -212,4 +212,3 @@ void ABatteryCollectorCharacter::UpdatePower(float PowerChange)
 	// Call visual effect
 	PowerChangeEffect();
 }
-

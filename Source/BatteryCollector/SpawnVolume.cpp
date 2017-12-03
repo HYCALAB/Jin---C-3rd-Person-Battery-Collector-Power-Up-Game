@@ -33,7 +33,6 @@ void ASpawnVolume::BeginPlay()
 void ASpawnVolume::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 FVector ASpawnVolume::GetRandomPointInVolume()
